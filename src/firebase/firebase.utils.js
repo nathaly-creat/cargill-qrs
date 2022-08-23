@@ -4,6 +4,7 @@ import {
     getAuth,
     GoogleAuthProvider,
     signInWithPopup,
+    signInWithEmailAndPassword,
 } from "firebase/auth";
 
 
@@ -12,6 +13,7 @@ export {
     getAuth,
     GoogleAuthProvider,
     signInWithPopup,
+    signInWithEmailAndPassword,
     // getFirestore,
     // collection,
     // addDoc,
