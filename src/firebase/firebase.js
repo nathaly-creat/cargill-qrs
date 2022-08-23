@@ -41,3 +41,22 @@ export const db = getFirestore(app);
 // const analytics = getAnalytics(app);
 
 
+// Iniciar sesión
+export const logInEmail = (email, password) => {
+  signInWithEmailAndPassword(auth, email, password) // inicia sesion con correo
+    .then((userCredential) => {
+      const user = userCredential.user; // obtiene el usuario
+      if (user.emailVerified) { // si el correo esta verificado
+        sessionStorage.setItem('user', JSON.stringify(user)); // guarda usuario en sessionStorage
+        window.location.hash = 'post'; // redirecciona a post.
+      } else {
+        window.alert('Para iniciar sesión debes confirmar el link que enviamos a tu correo electrónico');
+      }
+    })
+    .catch((error) => {
+      const errorMessage = error.message;
+      window.alert('Usario y/o contraseña inválido');
+      console.log(errorMessage);
+      // throw error;
+    });
+};
