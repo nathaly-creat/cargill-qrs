@@ -5,7 +5,8 @@ import cow from '../../images/cow.jpg';
 import pig from '../../images/pig.jpg';
 
 export function Home () {
-    return <div className="conponent-home">
+    return (
+    <div className="conponent-home">
         <div>
             <div>
                 <div>
@@ -20,5 +21,6 @@ export function Home () {
         <h1>¡Queremos escucharte!</h1>
         <Link to="/login" className="link-login">QUEJAS Y RECLAMOS</Link>
         <Link to="/sugerencias" className="link-sugerencias">SUGERENCIAS</Link>
-    </div>;
-}
+    </div>
+    );
+};
