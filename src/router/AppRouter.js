@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {NotAccess} from '../components/Shared/NotAccess.jsx'
-import { HomePrueba } from '../components/Home/HomePrueba.jsx';
+import { HomePrueba } from '../components/Login/loginPrueba.jsx';
 
 
 // ROUTER PRINCIPAL
