@@ -1,26 +1,37 @@
-import './Welcome.css'
-import { Link } from 'react-router-dom';
-import logoCargill from '../../images/logoCargill.jpg';
-import cow from '../../images/cow.jpg';
-import pig from '../../images/pig.jpg';
+import "./Home.css";
+import { Link } from "react-router-dom";
 
-export function Home () {
-    return (
-    <div className="conponent-home">
+import fondoLogin from "../../Images/fondoLogin.png";
+
+export function Home() {
+  return (
+        <div className="component-home">
         <div>
             <div>
-                <div>
-                    <img src={logoCargill} alt="images-logoCargill" />
-                    <figure className="component-home-figure">
-                        <img src={cow} alt="images-cow" />
-                        <img src={pig} alt="images-pig" />
-                    </figure>
-                </div>
+            <section className="container-image">
+                <figure className="component-home-image">
+                <img
+                    src={fondoLogin}
+                    className="image-login"
+                    alt="Images-fondo-login"
+                />
+                </figure>
+            </section>
             </div>
         </div>
-        <h1>¡Queremos escucharte!</h1>
-        <Link to="/login" className="link-login">QUEJAS Y RECLAMOS</Link>
-        <Link to="/sugerencias" className="link-sugerencias">SUGERENCIAS</Link>
-    </div>
+        <section className="container-home">
+            <h1>¡Queremos escucharte!</h1>
+            <div className="container-link-login-suggestions">
+                <Link to="/login" className="link-login">
+                CLIENTE
+                </Link>
+            </div>
+            <div className="container-link-login-suggestions">
+                <Link to="/Suggestions" className="link-suggestions">
+                AREA DE SERVICIO
+                </Link>
+            </div>
+        </section>
+        </div>
     );
-};
+}
