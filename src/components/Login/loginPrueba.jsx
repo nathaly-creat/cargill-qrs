@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 
-import { logInEmailClient } from "../../firebase/firebase.js";
 
-export const LoginPrueba = () => {
+import { logInEmailClient } from "../../firebase/firebase.js";
+import "./Login.css"
+
+
+export const Login = () => {
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -20,9 +23,10 @@ export const LoginPrueba = () => {
   };
 
   return (
-    <div className="component-formLogin">
+    <div className="form-login">
+      <h2 className="title-login">Ingresa tus datos</h2>
       <Form inline onSubmit={handleSubmit}>
-        <FormGroup className="mb-2 me-sm-2 mb-sm-0">
+        <FormGroup className="mb-2 me-sm-2 mb-sm-3">
           <Label className="me-sm-2" for="exampleEmail">
             Correo
           </Label>
@@ -34,7 +38,7 @@ export const LoginPrueba = () => {
             onChange={handleChange}
           />
         </FormGroup>
-        <FormGroup className="mb-2 me-sm-2 mb-sm-0">
+        <FormGroup className="mb-2 me-sm-2 mb-sm-4">
           <Label className="me-sm-2" for="examplePassword">
             Contraseña
           </Label>
@@ -46,8 +50,15 @@ export const LoginPrueba = () => {
             onChange={handleChange}
           />
         </FormGroup>
-        <Button>Ingresar</Button>
+        <button className="button-login" onClick={logInEmailClient}> Ingresar</button>
       </Form>
+     
     </div>
-    );
-    }
+
+  );
+};
+//       58 <FcGoogle onClick={signInGoogle} />
+
+
+    
+
