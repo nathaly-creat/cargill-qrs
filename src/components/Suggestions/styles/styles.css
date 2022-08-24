@@ -1,0 +1,44 @@
+
+*{
+  margin:0;
+  padding: 0;
+  font-family:Helvetica;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+   
+ .formSuggestion {
+  color: #005661;
+  }
+
+ .btn{
+    background-color: #00833C;
+    border-radius: 30px;
+    height: 40px;
+    width:150px;
+    color: #FFFFFF;
+    border-color: #00833C;
+    font-family: Helvetica;
+    justify-items: center;
+ }
+
+ td {
+  letter-spacing: 1px;
+  border-top: 2px solid #FFFFFF;
+}
+
+@media (min-width:600px)  {
+  .formSuggestion {
+    color: #005661;
+    align-content: center;
+    }
+
+
+    
+}
+
