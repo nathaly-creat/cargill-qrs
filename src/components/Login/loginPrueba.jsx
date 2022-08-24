@@ -1,29 +1,22 @@
 import { useState } from "react";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
-import { FcGoogle } from "react-icons/fc";
 
-import { logInEmail, signInGoogle } from "../../firebase/firebase.js";
+import { logInEmailClient } from "../../firebase/firebase.js";
 
-export const HomePrueba = () => {
-  // const [data , setData] = useState({email:'', password:''})
-  // console.log('style:red', data)
-
-  //   const ChangeImput = () => {
-  // }
+export const LoginPrueba = () => {
   const [user, setUser] = useState({
     email: "",
     password: "",
+    rol: "",
   });
 
   const handleChange = ({ target: { name, value } }) => {
     setUser({ ...user, [name]: value });
-    // console.log('user', user)
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    logInEmail(user.email, user.password);
-    console.log("user", user);
+    logInEmailClient(user.email, user.password, user.rol);
   };
 
   return (
@@ -54,8 +47,7 @@ export const HomePrueba = () => {
           />
         </FormGroup>
         <Button>Ingresar</Button>
-        <FcGoogle onClick={signInGoogle} />
       </Form>
     </div>
-  );
-};
+    );
+    }
