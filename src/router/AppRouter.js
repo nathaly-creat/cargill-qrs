@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import {NotAccess} from '../components/Shared/NotAccess.jsx'
-import { HomePrueba } from '../components/Login/loginPrueba.jsx';
-import {Quejas} from "../components/Quejas/Quejas.jsx";
+//import {NotAccess} from '../components/Shared/NotAccess.jsx'
+//import { HomePrueba } from '../components/Login/loginPrueba.jsx';
+import {Quejas} from "../components/Client/Quejas/Quejas.jsx";
 
 // import {NotAccess} from '../components/Shared/NotAccess.jsx'
 import {UserRoutes} from './UserRoutes'
