@@ -39,7 +39,7 @@ export const Quejas = () => {
   </FormGroup>
   <FormGroup>
     <Label for="exampleEmail">
-      Portal de Quejas y Reclamos
+      Portal de quejas y reclamos
     </Label>
 
   </FormGroup>
