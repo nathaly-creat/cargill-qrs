@@ -2,12 +2,11 @@ import { useState } from "react";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 
 
-import { logInEmail, signInGoogle } from "../../firebase/firebase.js";
+import { logInEmailClient } from "../../firebase/firebase.js";
 import "./Login.css"
 
-import { logInEmailClient } from "../../firebase/firebase.js";
 
-export const LoginPrueba = () => {
+export const Login = () => {
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -51,12 +50,9 @@ export const LoginPrueba = () => {
             onChange={handleChange}
           />
         </FormGroup>
-
-
-        <Button>Ingresar</Button>
-
+        <button className="button-login" onClick={logInEmailClient}> Ingresar</button>
       </Form>
-      <button className="button-login" onClick={logInEmail}> Ingresar</button>
+     
     </div>
 
   );
