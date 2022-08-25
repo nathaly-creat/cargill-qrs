@@ -1,9 +1,3 @@
 export const ServiceView = () => {
-    return (
-      <>
-        
-         HOLA SERVICIOS
-        
-      </>
-    )
-  }
+  return <>HOLA SERVICIOS</>;
+};
