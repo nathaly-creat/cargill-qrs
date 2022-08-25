@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./TracingTicket.css"
 
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 //Componente para seguimiento
 export const Seguimiento = () => {
@@ -29,7 +30,24 @@ export const Seguimiento = () => {
   <br/>
 
   <Link to="/handler/seguimiento/solicitud">
-  <button className="button-seguimiento"  > Consultar </button>
+  <button onClick={()=>   
+        Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: 'Gracias por calificarnos',
+        showConfirmButton: false,
+        timer: 2000
+       })
+      /* .then((result) => {
+        //volver al inicio
+        if(result){
+       // location.href=("../index.html")
+        }else{
+          //volver a jugar
+          window.location.reload()
+        }
+      })*/
+        } className="button-seguimiento"  > Consultar </button>
   </Link>
 
   </div>
