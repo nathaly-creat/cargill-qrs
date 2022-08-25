@@ -1,12 +1,12 @@
 .title-quejas{
-    color:#005661;
+    color:#00833C;
 }
 .form-quejas{
     display: flex;
     align-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 15% 15% 15% 15%;
+    margin: 8% 15% 15% 15%;
 }
 .button-quejas{
     background-color:#00833C;

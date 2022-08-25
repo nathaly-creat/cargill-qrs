@@ -1,38 +1,100 @@
-import { Link, Outlet } from 'react-router-dom'
-import { Navbar, Nav } from 'react-bootstrap';
-import { LogOut } from '../Shared/LogOut';
-import { useForm } from 'react-hook-form'
-import Header from "../Shared/NavBar/Header";
-import '../Suggestions/styles/styles.css'
-// import logocargill from 
 
-// COMPONENTE ADMIN CON B. DE NAVEGACION PARA ADMINISTRADOR.
+import React from "react";
+import { FormGroup, Label, Input, Form, FormText } from "reactstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import '../Suggestions/styles/styles.css';
+import { db } from "../../firebase/firebase.js";
+import { useState } from "react";
+import { collection, addDoc } from "firebase/firestore";
+import Swal from 'sweetalert2'
+
+//Componente con el formulario de quejas
+//PARA PROBARLO
+export const Suggestions = () => {
+
+  const usersCollectionRef = collection(db, "sugerencias");
+  const [cliente, setCliente] = useState([""]);
+  const [Correo, setCorreo] = useState([""]);
+  const [sugerencia, setSugerencia] = useState([""]);
+
+  const insertFormSugerencia = () => {
+    addDoc(usersCollectionRef,{
+      cliente:cliente,
+      Correo:Correo,
+      sugerencia:sugerencia,
+      
+     })
+      setCliente("");
+      setCorreo("");
+      setSugerencia("");
+
+      Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        text: 'Se envio correctamente la sugerencia',
+        showConfirmButton: false,
+        timer: 1800
+      }) 
+  };
+
+  return (
+    <div className="form-quejas">
+      <h2 className="title-quejas">Sugerencias</h2>
+      <br/>
+      <Form>
+       <FormGroup>
+          <Label for="exampleDate">Cliente</Label>
+          <Input
+            id="exampleDate"
+            name="date"
+            type="text"
+            value={cliente}
+            onChange={(event) => {
+              setCliente(event.target.value);
+            }}
+          />
+        </FormGroup>
+
+        <FormGroup>
+          <Label for="exampleDate">Correo</Label>
+          <Input
+            id="exampleDate"
+            name="date"
+            type="text"
+            value={Correo}
+            onChange={(event) => {
+              setCorreo(event.target.value);
+            }}
+          />
+        </FormGroup>
+
+        <FormGroup>
+          <Label for="exampleText">Comentario</Label>
+          <Input id="exampleText" name="text" type="textarea"
+           value={sugerencia}
+           onChange={(event) => {
+             setSugerencia(event.target.value);
+           }} />
+        </FormGroup>
+      </Form>
+      <button className="button-quejas"
+        onClick={() => insertFormSugerencia(
+          cliente,
+          Correo,
+          sugerencia,
+          )  
+        }> Enviar </button>
+    </div>
+  );
+};
+
+/*import '../Suggestions/styles/styles.css'
+
 export const Suggestions = () => {
   return (
     <>
-      <Header />
-      {/* <Navbar expand='sm' className='general-nav'>
-        <Navbar.Collapse id='basic-navbar-nav'>
-          <Nav className='general-nav-dir'>
-            <Link to='/quejas'>Quejas y Reclamos</Link>
-            <Link to='/sugerencias' >Sugerencias</Link>
-            <Link to='/seguimiento' >Seguimiento</Link>
-            <LogOut/>
-          </Nav>
-        </Navbar.Collapse>
-        <img
-          alt='logo-cargill'
-          // src={logocargill}
-          className='general-nav-img'
-        />
-        <Navbar.Toggle
-          aria-controls='basic-navbar-nav'
-          className='general-nav-toggle'
-        />
-      </Navbar>
-      <section className='general-selected-component'>
-        <Outlet/>
-      </section> */}
+     
+      {}
       <form class="formSuggestion">
         <div class="form-group">
           <h2> Sugerencias</h2>
@@ -51,18 +113,5 @@ export const Suggestions = () => {
       </form>
     </>
   )
-}
+}*/
 
-
-// export default function AddSuggestions({addsuggest}) {
-//   const {register, handleSubmit, formState: { errors }} = useForm();
-//   const onSubmit = (e) => {
-//     e.preventDefault();
-//     const suggestion = e.target.value;
-//     onSubmit(suggestion);
-//   };
-//   return (
-//  <>
-//   </>
-//   );
-// }
