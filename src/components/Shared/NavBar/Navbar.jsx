@@ -1,7 +1,6 @@
 import React from "react";
 import { NavbarWrapper } from "./NavbarWrapper";
 import { Link } from "react-router-dom";
-// import {Complain} from '../../Client/Complain.jsx'
 import { LogOut } from "../LogOut";
 import { ComplainView } from "../../../views/Complain/ComplainView";
 import { SuggestionsView } from "../../../views/Suggestion/SuggestionView";

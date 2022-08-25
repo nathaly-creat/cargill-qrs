@@ -1,12 +1,9 @@
 import { SuggestionsTable } from "../components/UserService/SuggestionService/SuggestionsTable.jsx"
-import { Header } from "../components/Shared/NavBar/Header.jsx";
-
+import {HeaderService} from '../components/UserService/NavBar/HeaderService.jsx'
 export const ServiceView = () => {
-  return (
-    <>
-      <Header />
-      <SuggestionsTable />
-    </>
-  );
-}
+  return <>
+  <HeaderService/>
+  <SuggestionsTable/>
+  </>;
+};
 
