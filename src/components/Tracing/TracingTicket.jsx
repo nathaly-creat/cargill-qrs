@@ -6,6 +6,7 @@ import "./Seguimiento.css"
 //Componente para seguimiento
 export const Seguimiento = () => {
     
+
     return (
       
     <div className="form-seguimiento">

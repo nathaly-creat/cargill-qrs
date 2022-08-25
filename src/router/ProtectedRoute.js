@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { ServiceView } from '../views/ServiceView.js';
-import { ComplainView } from '../views/ComplainView.js';
+import { ComplainView } from '../views/Complain/ComplainView.js';
 
 // ROUTER SEGUN USUARIO ACTIVO
 export const ProtectedRoute = ({ userData, children }) => {
