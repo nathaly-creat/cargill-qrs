@@ -1,5 +1,5 @@
-import { HeaderLogin } from "../Login/HeaderLogin.jsx";
-import {Login} from "../Login/Login.jsx";
+import { HeaderLogin } from "../../components/Login/HeaderLogin";
+import {Login} from "../../components/Login/Login";
 
 export const LoginView = () => {
   return (

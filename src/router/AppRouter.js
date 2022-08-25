@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { ProtectedRoute } from './ProtectedRoute';
-import { Login } from '../components/Login/Login.jsx';
+// import { Login } from '../components/Login/Login.jsx';
+import { Home } from '../components/Home/Home.jsx';
 import { auth, db } from '../firebase/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import {
@@ -11,9 +12,12 @@ import {
   getDocs,
 } from '../firebase/firebase.utils.js';
 
+
+/*Importación de Vistas*/
 import {SuggestionsView} from "../views/Suggestion/SuggestionView.js"
 import {ComplainView} from "../views/Complain/ComplainView.js"
 import { TracingView } from '../views/Tracing/TracingView';
+import { LoginView } from '../views/Login/LoginView.js';
 import { TracingViewSolicitud} from '../views/Tracing/TracingViewSolicitud';
 import { TracingCalificacionView} from '../views/Tracing/TracingCalificacionView.js';
 
@@ -37,13 +41,15 @@ export default function AppRouter() {
   });
 
   useEffect(() => {
-    if (userData && location.pathname !== '/handler') navigate('/login') ; //Este path router define el return vista reload**
+    if (userData && location.pathname !== '/handler') navigate('/') ; //Este path router define el return vista reload**
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData]);
 
   return (
     <Routes>
-      <Route path='/login' element={<Login setUserData={setUserData} />} />
+      <Route path='/' element={<Home setUserData={setUserData} />} />
+
+      <Route path='/login' element={<LoginView setUserData={setUserData} />} />
       <Route path='/handler' element={<ProtectedRoute userData={userData} />} />
       <Route path="/handler/sugerencias" element={<SuggestionsView/>}/>
       <Route path="/handler/quejas" element={<ComplainView/>}/>
@@ -55,3 +61,38 @@ export default function AppRouter() {
     </Routes>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

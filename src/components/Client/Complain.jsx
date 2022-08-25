@@ -159,7 +159,7 @@ export const Complain = () => {
           <Input
             id="exampleNumber"
             name="number"
-            placeholder="cantidad"
+            placeholder="Ej: HJFHKGD12563-1546"
             type="number"
             value={lote}
             onChange={(event) => {
@@ -173,7 +173,7 @@ export const Complain = () => {
           <Input
             id="exampleNumber"
             name="number"
-            placeholder="cantidad"
+            placeholder="Ej: 2"
             type="number"
             value={cantidad}
             onChange={(event) => {
@@ -187,7 +187,7 @@ export const Complain = () => {
           <Input
             id="exampleNumber"
             name="number"
-            placeholder="unidad"
+            placeholder="Ej: Saco"
             type="number"
             value={unidad}
             onChange={(event) => {
@@ -208,8 +208,7 @@ export const Complain = () => {
           <Label for="exampleFile">File</Label>
           <Input id="exampleFile" name="file" type="file" />
           <FormText>
-            This is some placeholder block-level help text for the above input.
-            It‘s a bit lighter and easily wraps to a new line.
+           Capacidad Archivos hasta 300Mb. Formato pdf, jpg, png. 
           </FormText>
         </FormGroup>
       </Form>

@@ -18,7 +18,7 @@ const MenuButtonWrapper = styled.button
 function MenuButton({ open, handleClick }) {
   return !open ? (
     <MenuButtonWrapper onClick={handleClick}>
-      <svg viewBox="0 0 100 80" width="45" height="45" fill="#000000">
+      <svg viewBox="0 0 100 80" width="40" height="40" fill="#000000">
         <rect width="90" height="10" />
         <rect y="30" width="80" height="10" />
         <rect y="60" width="70" height="10" />
