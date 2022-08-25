@@ -4,7 +4,7 @@ import { logInEmailClient } from '../../firebase/firebase.js';
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
 
-export const HomePrueba = ({ setUserData }) => {
+export const Login = ({ setUserData }) => {
   const navigate = useNavigate();
   const [user, setUser] = useState({
     email: '',

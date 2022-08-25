@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { ProtectedRoute } from './ProtectedRoute';
-import { HomePrueba } from '../components/Login/loginPrueba.jsx';
+import { Login } from '../components/Login/Login.jsx';
 import { auth, db } from '../firebase/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import {
@@ -37,7 +37,7 @@ export default function AppRouter() {
 
   return (
     <Routes>
-      <Route path='/' element={<HomePrueba setUserData={setUserData} />} />
+      <Route path='/' element={<Login setUserData={setUserData} />} />
       <Route path='/handler' element={<ProtectedRoute userData={userData} />} />
     </Routes>
   );
