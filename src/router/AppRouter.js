@@ -31,7 +31,7 @@ export default function AppRouter() {
   });
 
   useEffect(() => {
-    if (userData && location.pathname !== '/handler') navigate('/login'); //Este path router define el return vista reload**
+    if (userData && location.pathname !== '/handler') navigate('/login') ; //Este path router define el return vista reload**
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData]);
 

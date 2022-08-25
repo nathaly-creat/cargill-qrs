@@ -16,3 +16,23 @@
   width: 150px;
   color: #ffffff;
 }
+
+.title-login{
+    color:#005661;
+}
+.form-login{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 15% 15% 15% 15%;
+}
+.button-login{
+    background-color:#00833C;
+    border-radius:30px;
+    border-color:transparent;
+    height: 40px;
+    width:150px;
+    color:#FFFFFF;
+}
+

@@ -23,7 +23,7 @@ export const Login = ({ setUserData }) => {
   return (
     <div className='form-login'>
       <h2 className='title-login'>Ingresa tus datos</h2>
-      <Form inline onSubmit={handleSubmit}>
+      <Form inline>
         <FormGroup className='mb-2 me-sm-2 mb-sm-3'>
           <Label className='me-sm-2' for='exampleEmail'>
             Correo

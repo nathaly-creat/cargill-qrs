@@ -6,10 +6,10 @@ import { LogOut } from "../LogOut";
 const Navbar = ({ open }) => {
   return (
     <NavbarWrapper open={open}>
-      <Link to="/quejas">QUEJAS Y RECLAMOS</Link>
-      <Link to="/sugerencias">SUGERENCIAS</Link>
-      <Link to="/seguimiento">SEGUIMIENTO</Link>
-      <Link to="/cerrar sesion" onClick={LogOut}>
+      <Link to="/handler/quejas">QUEJAS Y RECLAMOS</Link>
+      <Link to="/handler/sugerencias">SUGERENCIAS</Link>
+      <Link to="/handler/seguimiento">SEGUIMIENTO</Link>
+      <Link to="/handler/cerrar sesion" onClick={LogOut}>
         CERRAR SESIÓN
       </Link>
     </NavbarWrapper>
