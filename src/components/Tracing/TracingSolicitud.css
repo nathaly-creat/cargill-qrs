@@ -65,4 +65,7 @@
     background-color: #00833C;
   }
 
- 
+ .titleForm {
+  display: flex;
+  justify-content: center;
+ }

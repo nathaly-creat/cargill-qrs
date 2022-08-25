@@ -83,18 +83,23 @@ const buttonState = async (user) => {
           key={id}>
              <h1 className='numero'>1</h1>
             </div> 
-
+            <div className='titleForm'>
+                  <h2 style={{color:"#DAAA00" }}>Recibido</h2>
+            </div>
             <div className={'containerForm '+ (user.state ==1 ?'containerForm':user.state ==2 ?'containerForm-uno': '')}
           key={id}>
              <h1 className='numero'>2</h1>
-        
-            
             </div> 
-
+             <div className='titleForm'>
+                  <h2 style={{color:"#DAAA00"}}>En Proceso</h2>
+            </div>            
             <div className={'containerForm '+ (user.state == 2?'containerForm':user.state ==3 ?'containerForm-uno': '')}
           key={id}>
              <h1 className='numero'>3</h1>
             </div> 
+             <div className='titleForm'>
+                 <h2 style={{color:"#DAAA00" , }}>Resuelto</h2>
+            </div>
 
             <Link to="/handler/seguimiento/solicitud/calificacion">
             <button className={'buttonStyleSolicitus '+ (user.state ==2 ? 'buttonStyleSolicitus-uno': user.state ==3?'buttonStyleSolicitus-uno':'')}
