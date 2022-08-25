@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { HeaderWrapper } from "./styles/header";
+import { HeaderWrapper } from "./HeaderWrapper";
 import Navbar from "./Navbar";
-import MenuButton from "../Suggestions/MenuButton";
-import logoCargill from "../../assets/logoCargill.jpg";
+import MenuButton from "./MenuButton";
+import logoCargill from "../../../assets/logoCargill.jpg";
 // import retroceder from "../../assets/retroceder.png";
 // import { fa-arrow-rotate-left } from 'react-icons/fa';
 import { BiArrowBack } from 'react-icons/bi'
-import { LogOut } from "../Shared/LogOut";
+import { LogOut } from "../LogOut";
 
-function Header() {
+export const Header = () => {
     const [open, setOpen] = useState(false);
     
     const handleClick = () => {
@@ -26,5 +26,3 @@ function Header() {
     </HeaderWrapper>
   );
 }
-
-export default Header;

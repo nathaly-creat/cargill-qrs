@@ -1,8 +1,8 @@
 import { Link, Outlet } from 'react-router-dom'
 import { Navbar, Nav } from 'react-bootstrap';
-import { LogOut } from '../../components/Shared/LogOut';
+import { LogOut } from '../Shared/LogOut';
 import { useForm } from 'react-hook-form'
-import Header from "../Suggestions/Header";
+import Header from "../Shared/NavBar/Header";
 import '../Suggestions/styles/styles.css'
 // import logocargill from 
 

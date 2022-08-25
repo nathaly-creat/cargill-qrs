@@ -1,7 +1,3 @@
 export const ComplainView = () => {
-    return (
-      <>
-         HOLA PROVEEDOR
-      </>
-    )
-  }
+  return <>HOLA PROVEEDOR</>;
+};
