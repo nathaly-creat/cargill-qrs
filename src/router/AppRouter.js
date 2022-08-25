@@ -12,6 +12,8 @@ import {
   getDocs,
 } from '../firebase/firebase.utils.js';
 
+
+/*Importación de Vistas*/
 import {SuggestionsView} from "../views/Suggestion/SuggestionView.js"
 import {ComplainView} from "../views/Complain/ComplainView.js"
 import { TracingView } from '../views/Tracing/TracingView';

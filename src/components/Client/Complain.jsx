@@ -5,7 +5,7 @@ import "./Complain.css";
 
 import { db } from "../../firebase/firebase.js";
 import { useState } from "react";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc,serverTimestamp } from "firebase/firestore";
 import Swal from 'sweetalert2'
 
 //Componente con el formulario de quejas
@@ -13,6 +13,7 @@ import Swal from 'sweetalert2'
 export const Complain = () => {
 
   const usersCollectionRef = collection(db, "quejas");
+  const [correo, setCorreo] = useState([""]);
   const [opcionesQueja, setOpcionesQueja] = useState([""]);
   const [plantaProducto, setPlantaProducto] = useState([""]);
   const [factura, setFactura] = useState([""]);
@@ -25,6 +26,9 @@ export const Complain = () => {
 
   const insertFormQueja = () => {
     addDoc(usersCollectionRef,{
+     // date: serverTimestamp(),
+     createdAt: serverTimestamp(),
+      correo:correo,
       opcionesQueja:opcionesQueja,
       plantaProducto:plantaProducto,
       factura:factura,
@@ -35,6 +39,7 @@ export const Complain = () => {
       unidad:unidad,
       comentario:comentario,
      })
+     setCorreo("");
       setOpcionesQueja("");
       setPlantaProducto("");
       setFactura("");
@@ -60,9 +65,23 @@ export const Complain = () => {
     <div className="form-quejas">
       <h2 className="title-quejas">Quejas y reclamos</h2>
       <Form>
-        <Label for="exampleSelect" sm={4}>
+      <FormGroup>
+          <Label for="exampleDatetime">Correo</Label>
+          <Input
+            id="exampleDatetime"
+            name="datetime"
+            placeholder="Correo"
+            value={correo}
+            onChange={(event) => {
+              setCorreo(event.target.value);
+            }}
+          />
+        </FormGroup>
+
+        <Label for="exampleSelect" sm={6}>
           Opciones de quejas
         </Label>
+
         <FormGroup row>
           <Input id="exampleSelect" name="select" type="select"
            value={opcionesQueja}
@@ -160,7 +179,7 @@ export const Complain = () => {
           <Input
             id="exampleNumber"
             name="number"
-            placeholder="cantidad"
+            placeholder="Ej: HJFHKGD12563-1546"
             type="number"
             value={lote}
             onChange={(event) => {
@@ -174,7 +193,7 @@ export const Complain = () => {
           <Input
             id="exampleNumber"
             name="number"
-            placeholder="cantidad"
+            placeholder="Ej: 2"
             type="number"
             value={cantidad}
             onChange={(event) => {
@@ -188,7 +207,7 @@ export const Complain = () => {
           <Input
             id="exampleNumber"
             name="number"
-            placeholder="unidad"
+            placeholder="Ej: Saco"
             type="number"
             value={unidad}
             onChange={(event) => {
@@ -209,13 +228,13 @@ export const Complain = () => {
           <Label for="exampleFile">File</Label>
           <Input id="exampleFile" name="file" type="file" />
           <FormText>
-            This is some placeholder block-level help text for the above input.
-            It‘s a bit lighter and easily wraps to a new line.
+           Capacidad Archivos hasta 300Mb. Formato pdf, jpg, png. 
           </FormText>
         </FormGroup>
       </Form>
       <button className="button-quejas"
         onClick={() => insertFormQueja(
+          correo,
           opcionesQueja,
           plantaProducto,
           factura,
@@ -224,7 +243,8 @@ export const Complain = () => {
           lote,
           cantidad,
           unidad,
-          comentario
+          comentario,
+        
           )  
         }> Enviar </button>
     </div>

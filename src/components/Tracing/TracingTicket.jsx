@@ -34,9 +34,9 @@ export const Seguimiento = () => {
         Swal.fire({
         position: 'top-center',
         icon: 'success',
-        title: 'Gracias por calificarnos',
+        title: 'Actualizando estatus del ticket',
         showConfirmButton: false,
-        timer: 2000
+        timer: 3000
        })
       /* .then((result) => {
         //volver al inicio

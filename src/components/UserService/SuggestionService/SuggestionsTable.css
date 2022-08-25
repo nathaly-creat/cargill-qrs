@@ -1,0 +1,71 @@
+.suggestions-service {
+   /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: auto;
+    padding: 18px;
+    width: 100%;*/
+    
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5% ;
+}
+.suggestions-service h2 {
+    margin-left: 32%;
+    margin-top: 25px;
+    color: #00833C;
+    float: center;
+    font-size: 1.5rem;
+
+}
+
+.form-check-input {
+    width: 10px;
+    height: 10px;
+}
+.table-responsive {
+    justify-content: space-evenly;
+}
+.suggestions-service-table {
+  height: 80vh;
+}
+.suggestions-service-table table{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    margin-top:20px;
+    font-size: 0.5rem;
+}
+
+.suggestions-service-table th {
+    font-size: 1rem;
+    font-family: 'Arial';
+    justify-content: center;
+}
+.suggestions-service-table td {
+    font-size: 1rem;
+    font-family: 'Arial';
+    justify-content: center;
+    align-content: center;
+}
+
+.dropdown .btn {
+    font-size: 10px;
+    background-color: #D9D9D9;
+    color: black;
+}
+ 
+.btn-secondary {
+    background-color: #65BD1B;
+}
+
+.btn-process-yes {
+    background-color: #CF7F00;
+}
+.btn-process-no {
+    background-color: #65BD1B;
+}
