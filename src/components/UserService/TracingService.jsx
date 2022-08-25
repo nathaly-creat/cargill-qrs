@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 
 import React, { useEffect, useState } from "react";
 import {collection, getDocs, updateDoc,doc, where, query} from "firebase/firestore";
@@ -15,6 +16,7 @@ export const TracingService = () => {
   
     useEffect(() => {
       getUsers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     
   /* ------------ Funcion estados del boton ------------ */
@@ -81,17 +83,17 @@ export const TracingService = () => {
             <div className="containerOrders">
             
             
-                <button className={'buttonStyle '+ (user.state ==0 ? 'buttonStyle':user.state ==1 ?'buttonStyle-preparing':'')}
+                <button className={'buttonStyle '+ (user.state === 0 ? 'buttonStyle':user.state ==1 ?'buttonStyle-preparing':'')}
                  onClick={ ()=> buttonState(user)}> 
                 {user.state ? 'Recibido':'Recibido'} 
                 </button>
 
-                <button className={'buttonStyle '+ (user.state ==1 ?'buttonStyle':user.state ==2 ?'buttonStyle-preparing':'')}
+                <button className={'buttonStyle '+ (user.state === 1 ?'buttonStyle':user.state ==2 ?'buttonStyle-preparing':'')}
                  onClick={ ()=> buttonState(user)}> 
                 {user.state ? 'Pendiente':'Pendiente'} 
                 </button>
 
-                <button className={'buttonStyle '+ (user.state ==2 ? 'buttonStyle':user.state ==3 ?'buttonStyle-preparing':'')}
+                <button className={'buttonStyle '+ (user.state === 2 ? 'buttonStyle':user.state ==3 ?'buttonStyle-preparing':'')}
                  onClick={ ()=> buttonState(user)}> 
                 {user.state ? 'Resuelto':'Resuelto'} 
                 </button>
