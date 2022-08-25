@@ -5,9 +5,8 @@ import fondoLogin from "../../Images/fondoLogin.png";
 
 export function Home() {
   return (
-        <div className="component-home">
         <div>
-            <div>
+        <div className="component-home">
             <section className="container-image">
                 <figure className="component-home-image">
                 <img
@@ -17,21 +16,21 @@ export function Home() {
                 />
                 </figure>
             </section>
-            </div>
-        </div>
         <section className="container-home">
-            <h1>¡Queremos escucharte!</h1>
-            <div className="container-link-login-suggestions">
+            <h1 className="title-home">¡Queremos escucharte!</h1>
+            <h2 className="second-title-home">Portal de quejas y reclamos</h2>
+            <div className="container-link-login">
                 <Link to="/login" className="link-login">
                 CLIENTE
                 </Link>
             </div>
-            <div className="container-link-login-suggestions">
-                <Link to="/Suggestions" className="link-suggestions">
+            <div className="container-link-login">
+                <Link to="/login" className="link-service-area">
                 AREA DE SERVICIO
                 </Link>
             </div>
         </section>
+        </div>
         </div>
     );
 }

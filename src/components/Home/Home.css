@@ -3,6 +3,71 @@ body {
     padding: 0;
 }
 
+.component-home{
+    display: flex;
+    flex-direction: row;
+}
+
+.container-image {
+    width: 50%;
+    height: 81%;
+}
+
+.image-login{
+    width: 100%;
+}
+
+.container-home{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-home {
+    font-size: 45px;
+    font-family: "Helvetica Neue";
+    margin-bottom: 5%;
+    font-weight: bold;
+}
+
+.second-title-home{
+    font-size: 2rem;
+    font-family: "Helvetica Neue";
+}
+
+.container-link-login{
+    width: 45%;
+    height: 40px;
+    margin-top: 5%;
+    padding: 2px;
+    padding-top: 4px;
+    padding-bottom: 0px;
+    background: #00833c;
+    border-radius: 12px;
+}
+
+.link-login {
+    margin-top: 50px;
+    font-size: 15px;
+    padding-left: 30%;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: "Helvetica Neue";
+    padding-bottom: 30%;
+}
+
+.link-service-area {
+    padding-left: 3%;
+    text-decoration: none;
+    font-family: "Helvetica Neue";
+    color: #FFFFFF;
+    font-size: 19px;
+}
+/* .container-image {
+    max-width: 960px;
+}
+
 .component-home-image{
     margin: auto;
 }
@@ -49,29 +114,45 @@ h1 {
     padding-left: 12%;
     color: #FFFFFF;
     text-decoration: none;
-}
+} */
 
 @media only screen and (min-width: 1024px) {
- .component-home{
+ /* .component-home{
   display: flex;
   flex-direction: row;
- }
+ } */
 
  .image-login {
-    height: 100%;
+    height: 70%;
+    width: 75%;
  }
 
  .container-home{
-    margin-top: 19%;
-    margin-left: 15%;
+    margin-top: 14%;
+    margin-left: 2%;
  }
 
- h1 {
-    font-size: 40px;
+ .second-title-home {
+    font-size: 2rem;
+    margin-bottom: 6%;
+    margin-top: 1%;
+ }
+
+ .link-service-area {
+    padding-left: 9%;
+    font-size: 17px;
+ }
+
+ .link-login{
+    font-size: 17px;
+ }
+/* .container-link-login-suggestions {
+    width: 45%;
+    margin-bottom: 4%;
+} */
+
 }
 
-.container-link-login-suggestions {
-    width: 25%;
-    margin-bottom: 4%;
-}
+@media only screen and (min-width: 768px) {
+    
 }

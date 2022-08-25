@@ -5,8 +5,14 @@ import {
     GoogleAuthProvider,
     signInWithPopup,
     signInWithEmailAndPassword,
+    onAuthStateChanged,
+    signOut,
 } from "firebase/auth";
 
+import {
+    getFirestore, collection, addDoc, onSnapshot, doc, getDoc, 
+    query, orderBy, serverTimestamp,
+  } from 'firebase/firestore';
 
 export {
     initializeApp,
@@ -14,14 +20,14 @@ export {
     GoogleAuthProvider,
     signInWithPopup,
     signInWithEmailAndPassword,
-    // getFirestore,
-    // collection,
-    // addDoc,
-    // onSnapshot,
-    // deleteDoc,
-    // doc,
-    // getDoc,
-    // query,
-    // orderBy,
-    // serverTimestamp,
+    getFirestore,
+    collection,
+    addDoc,
+    onSnapshot,
+    //deleteDoc,
+    doc,
+    getDoc,
+    query,
+    orderBy,
+    serverTimestamp,
   };
