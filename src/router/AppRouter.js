@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { ProtectedRoute } from './ProtectedRoute';
 import { Login } from '../components/Login/Login.jsx';
+import { Home } from '../components/Home/Home.jsx';
 import { auth, db } from '../firebase/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import {
@@ -39,12 +40,14 @@ export default function AppRouter() {
   });
 
   useEffect(() => {
-    if (userData && location.pathname !== '/handler') navigate('/login') ; //Este path router define el return vista reload**
+    if (userData && location.pathname !== '/handler') navigate('/') ; //Este path router define el return vista reload**
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData]);
 
   return (
     <Routes>
+      <Route path='/' element={<Home setUserData={setUserData} />} />
+
       <Route path='/login' element={<Login setUserData={setUserData} />} />
       <Route path='/handler' element={<ProtectedRoute userData={userData} />} />
       <Route path="/handler/sugerencias" element={<SuggestionsView/>}/>
@@ -57,3 +60,38 @@ export default function AppRouter() {
     </Routes>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

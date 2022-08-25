@@ -28,7 +28,7 @@ export {
   GoogleAuthProvider,
   signInWithPopup,
   signInWithEmailAndPassword,
-  onAuthStateChanged,
+  onAuthStateChanged, 
   signOut,
   getFirestore,
   collection,
@@ -38,6 +38,6 @@ export {
   getDocs,
   query,
   orderBy,
-  where,
   serverTimestamp,
-};
+  where,
+  };
