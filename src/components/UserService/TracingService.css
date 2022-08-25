@@ -1,0 +1,33 @@
+
+
+.containerOrders{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10% ;
+
+}
+
+ /* ------------ Cambio de color el buton ------------ */
+ .buttonStyle{
+    background-color: #BFDCE0;
+    font-family: 'Kadwa', serif;
+    font-weight: bold;
+    margin: 18px 0px 0px 94px;
+    font-size: 18px;
+    
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    width: 30%;
+    height: 50px;
+    border-radius: 15px;
+  }
+  
+  .buttonStyle-preparing{
+    background-color: #007582;
+  }
+  .buttonStyle-preparing-dos{
+    background-color: #007582;
+  }

@@ -15,6 +15,7 @@ import {
   // serverTimestamp,
 } from "./firebase.utils.js";
 
+
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: 'AIzaSyCE4DzYJ7zgw8TpThmzXM9s2_zbJn8hefQ',
@@ -25,6 +26,7 @@ const firebaseConfig = {
   appId: '1:209922840115:web:50b0e7aee46537a75bb546',
   measurementId: 'G-QMY6KYQPY0',
 };
+
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
@@ -52,7 +54,6 @@ export const logInEmailClient = async (email, password, setUserData) => {
     });
 
     sessionStorage.setItem('user', JSON.stringify(user)); // guarda usuario en sessionStorage
-
   } catch (error) {
     console.log(error);
     return { error: error.message };

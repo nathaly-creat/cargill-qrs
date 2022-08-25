@@ -1,0 +1,68 @@
+
+.containerFormSol{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5% ;
+
+}
+.titulo{
+    color: #00833C;
+}
+.sub-titulo{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.numero{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25%
+}
+
+
+/* ------------ Cambia de color el container ------------ */
+.containerForm{
+    height: 100px;
+    width: 100px;
+    border: 4px solid #BFDCE0;
+    background-color: #BFDCE0;
+    border-radius: 50px;
+    margin-left: 52px;
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 10px rgb(0 0 0 / 30%);
+}
+.containerForm-uno{
+    border: 4px solid #007582;
+    background-color: #007582;
+  }
+  .containerForm-preparing-dos{
+    border: 4px solid #007582;
+    background-color: #007582;
+  }
+
+  .buttonStyleSolicitus{
+    border: 4px solid #BFDCE0;
+    background-color: #BFDCE0;
+    font-family: 'Kadwa', serif;
+    font-weight: bold;
+    margin: 18% 0% 0% 0%;
+    font-size: 18px;
+    color: #FFFFFF;
+    border-style: solid;
+    border-width: 2px;
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+  }
+ .buttonStyleSolicitus-uno{
+    border: 4px solid #00833C;
+    background-color: #00833C;
+  }
+
+ 

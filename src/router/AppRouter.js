@@ -11,6 +11,12 @@ import {
   getDocs,
 } from '../firebase/firebase.utils.js';
 
+import {SuggestionsView} from "../views/Suggestion/SuggestionView.js"
+import {ComplainView} from "../views/Complain/ComplainView.js"
+import { TracingView } from '../views/Tracing/TracingView';
+import { TracingViewSolicitud} from '../views/Tracing/TracingViewSolicitud';
+import { TracingCalificacionView} from '../views/Tracing/TracingCalificacionView.js';
+
 // ROUTER PRINCIPAL
 export default function AppRouter() {
   const navigate = useNavigate();
@@ -31,15 +37,21 @@ export default function AppRouter() {
   });
 
   useEffect(() => {
-    if (userData && location.pathname !== '/handler') navigate('/'); //Este path router define el return vista reload**
+    if (userData && location.pathname !== '/handler') navigate('/login') ; //Este path router define el return vista reload**
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData]);
 
   return (
     <Routes>
-      <Route path='/' element={<Login setUserData={setUserData} />} />
+      <Route path='/login' element={<Login setUserData={setUserData} />} />
       <Route path='/handler' element={<ProtectedRoute userData={userData} />} />
+      <Route path="/handler/sugerencias" element={<SuggestionsView/>}/>
+      <Route path="/handler/quejas" element={<ComplainView/>}/>
+      <Route path="/handler/seguimiento" element={<TracingView/>}/>
+
+      <Route path="/handler/seguimiento/solicitud" element={<TracingViewSolicitud/>}/>
+      <Route path="/handler/seguimiento/solicitud/calificacion" element={<TracingCalificacionView/>}/>
+
     </Routes>
   );
 }
-
