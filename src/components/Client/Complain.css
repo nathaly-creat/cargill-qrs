@@ -1,0 +1,18 @@
+.title-quejas{
+    color:#00833C;
+}
+.form-quejas{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 8% 15% 15% 15%;
+}
+.button-quejas{
+    background-color:#00833C;
+    border-radius:30px;
+    border-color:transparent;
+    height: 40px;
+    width:150px;
+    color:#FFFFFF;
+}
