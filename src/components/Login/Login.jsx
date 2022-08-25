@@ -4,7 +4,8 @@ import { logInEmailClient } from '../../firebase/firebase.js';
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
 
-export const Login = ({ setUserData }) => {
+
+export  const Login = ({ setUserData }) => {
   const navigate = useNavigate();
   const [user, setUser] = useState({
     email: '',
@@ -21,7 +22,7 @@ export const Login = ({ setUserData }) => {
   };
 
   return (
-    <div className='form-login'>
+      <div className='form-login'>
       <h2 className='title-login'>Ingresa tus datos</h2>
       <Form inline>
         <FormGroup className='mb-2 me-sm-2 mb-sm-3'>
