@@ -1,8 +1,8 @@
 import {TracingService} from '../components/UserService/TracingService.jsx'
-import {Header} from '../components/Shared/NavBar/Header.jsx'
+import {HeaderService} from '../components/UserService/NavBar/HeaderService.jsx'
 export const ServiceView = () => {
   return <>
-  <Header/>
+  <HeaderService/>
   <TracingService/>
   </>;
 };
