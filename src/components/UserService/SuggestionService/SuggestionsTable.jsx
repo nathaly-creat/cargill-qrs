@@ -1,13 +1,35 @@
-import React from "react";
 import { Table } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useEffect, useState } from "react";
+import {collection, getDocs, updateDoc, doc, where, query} from "firebase/firestore";
+import { db } from "../../../firebase/firebase.js";
 import "./SuggestionsTable.css";
+import Swal from 'sweetalert2'
 
 export const SuggestionsTable = () => {
+
+  const [users, setTotal] = useState([]);
+  const usersCollectionRef = collection(db, "quejas");  
+
+  const getUsers = async () => {
+   const data = await getDocs(query(usersCollectionRef));
+    setTotal(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));   
+  };
+
+  useEffect(() => {
+    getUsers();
+  }, []);
+
+
   return (
-    <div className="suggestions-service">
+    <div>
+       <div className="suggestions-service">
+      <br/>
       <h2>Seguimiento Servicio al Cliente</h2>
-      <Table responsive className="suggestions-service-table">
+      <br/>
+      <div className="containerOrders">
+            <div>
+               <Table responsive className="suggestions-service-table">
         <thead>
           <tr>
             <th>Ticket</th>
@@ -20,30 +42,49 @@ export const SuggestionsTable = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
+          {console.log(users)}
+        {users.map((user, id) => {
+          return(
+          <tr key={id} >
             <th scope="row">
               1
             </th>
-            
-            <td>correo</td>
+            <td>{user.correo} </td>
             <td>
-              opcionesQueja
+              {user.opcionesQueja}
             </td>
             <td>
-              lote
+              {user.lote}
             </td>
             <td>
-              creando el ticket
+              {console.log(user.createdAt)}
+          {new Date((user.createdAt.seconds *1000) +(user.createdAt.nanoseconds/1000)).toLocaleString()}
             </td>
             <td>
-              Nro factura
+             {user.factura}
             </td>
             <td>
-              <button>Asignar</button>
+              <button className="btn-assign" onClick={()=>   
+        Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title:'Se envio correctamente',
+        text: 'Queja asignada al departamento',
+        showConfirmButton: false,
+        timer: 3000
+       })
+        } >Asignar</button>
             </td>
           </tr>
+          )
+          })}
         </tbody>
       </Table>
+            </div>
+    
+   
+      </div>
+    </div>
     </div>
   );
 };

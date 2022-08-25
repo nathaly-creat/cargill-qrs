@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Complain.css";
 import { db } from "../../firebase/firebase.js";
 import { useState } from "react";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc,serverTimestamp } from "firebase/firestore";
 import Swal from 'sweetalert2'
 
 //Componente con el formulario de quejas
@@ -12,6 +12,7 @@ import Swal from 'sweetalert2'
 export const Complain = () => {
 
   const usersCollectionRef = collection(db, "quejas");
+  const [correo, setCorreo] = useState([""]);
   const [opcionesQueja, setOpcionesQueja] = useState([""]);
   const [plantaProducto, setPlantaProducto] = useState([""]);
   const [factura, setFactura] = useState([""]);
@@ -24,6 +25,9 @@ export const Complain = () => {
 
   const insertFormQueja = () => {
     addDoc(usersCollectionRef,{
+     // date: serverTimestamp(),
+     createdAt: serverTimestamp(),
+      correo:correo,
       opcionesQueja:opcionesQueja,
       plantaProducto:plantaProducto,
       factura:factura,
@@ -34,6 +38,7 @@ export const Complain = () => {
       unidad:unidad,
       comentario:comentario,
      })
+     setCorreo("");
       setOpcionesQueja("");
       setPlantaProducto("");
       setFactura("");
@@ -59,9 +64,23 @@ export const Complain = () => {
     <div className="form-quejas">
       <h2 className="title-quejas">Quejas y reclamos</h2>
       <Form>
-        <Label for="exampleSelect" sm={4}>
+      <FormGroup>
+          <Label for="exampleDatetime">Correo</Label>
+          <Input
+            id="exampleDatetime"
+            name="datetime"
+            placeholder="Correo"
+            value={correo}
+            onChange={(event) => {
+              setCorreo(event.target.value);
+            }}
+          />
+        </FormGroup>
+
+        <Label for="exampleSelect" sm={6}>
           Opciones de quejas
         </Label>
+
         <FormGroup row>
           <Input id="exampleSelect" name="select" type="select"
            value={opcionesQueja}
@@ -188,7 +207,7 @@ export const Complain = () => {
             id="exampleNumber"
             name="number"
             placeholder="Ej: Saco"
-            type="number"
+            type="text"
             value={unidad}
             onChange={(event) => {
               setUnidad(event.target.value);
@@ -214,6 +233,7 @@ export const Complain = () => {
       </Form>
       <button className="button-quejas"
         onClick={() => insertFormQueja(
+          correo,
           opcionesQueja,
           plantaProducto,
           factura,
@@ -222,7 +242,8 @@ export const Complain = () => {
           lote,
           cantidad,
           unidad,
-          comentario
+          comentario,
+        
           )  
         }> Enviar </button>
     </div>
