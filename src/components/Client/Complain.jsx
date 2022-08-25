@@ -2,7 +2,6 @@ import React from "react";
 import { FormGroup, Label, Input, Form, FormText } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Complain.css";
-
 import { db } from "../../firebase/firebase.js";
 import { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";

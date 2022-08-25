@@ -1,11 +1,6 @@
 import React from "react";
 import { Table } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-import { SelectAgrupador } from "./SelectAgrupador.jsx";
-import { SelectTypeComplain } from "./SelectTypeComplain.jsx";
-import { SelectPriority } from "./SelectPriority.jsx";
-import { SelectProceeds } from "./SelectProceeds.jsx";
 import "./SuggestionsTable.css";
 
 export const SuggestionsTable = () => {

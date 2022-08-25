@@ -61,6 +61,7 @@ export const Suggestions = () => {
             id="exampleDate"
             name="date"
             type="text"
+            placeholder='correo@email.com'
             value={Correo}
             onChange={(event) => {
               setCorreo(event.target.value);
@@ -70,7 +71,7 @@ export const Suggestions = () => {
 
         <FormGroup>
           <Label for="exampleText">Comentario</Label>
-          <Input id="exampleText" name="text" type="textarea"
+          <Input style={{resize: "both", height: "6em", width: "300px"}}id="exampleText" name="text" type="textarea" 
            value={sugerencia}
            onChange={(event) => {
              setSugerencia(event.target.value);

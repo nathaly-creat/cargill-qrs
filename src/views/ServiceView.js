@@ -8,4 +8,5 @@ export const ServiceView = () => {
       <SuggestionsTable />
     </>
   );
-};
+}
+

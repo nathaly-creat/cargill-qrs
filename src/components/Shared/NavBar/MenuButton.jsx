@@ -6,16 +6,19 @@ const MenuButtonWrapper = styled.button
   border: none;
   box-shadow: 0px 0px 1px rgb(50, 50, 50);
   margin-top: 1.3rem;
+  margin-left : 1rem;
 
-  @media only screen and (min-width: 768px) {
-    display: none;
+
+  @media (max-width: 640px) {
+    body {
+    display: flex;
   }
 `;
 
 function MenuButton({ open, handleClick }) {
   return !open ? (
     <MenuButtonWrapper onClick={handleClick}>
-      <svg viewBox="0 0 100 80" width="30" height="30" fill="#000000">
+      <svg viewBox="0 0 100 80" width="45" height="45" fill="#000000">
         <rect width="90" height="10" />
         <rect y="30" width="80" height="10" />
         <rect y="60" width="70" height="10" />

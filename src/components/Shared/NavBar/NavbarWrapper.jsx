@@ -15,29 +15,24 @@ export const NavbarWrapper = styled.nav`
   transition: right 0.3s linear;
   font-family:'Helvetica Neue';
 
-
-  @media only screen and (min-width: 624px) {
-    flex-direction: row;
-    position: initial;
-    height: auto;
-    justify-content: center;
-    background: #FFFFFF;
-  }
-
-  @media only screen and (min-width: 768px) {
-    flex-direction: row;
-    position: initial;
-    height: auto;
-    justify-content: center;
-    background: #FFFFFF;
-  }
   a {
     padding: 0.5rem 0.8rem;
-    color: #;
+    color: #FFFFFF;
     text-decoration: none;
-  }
+  };
+
   a:hover {
     color: #CF7F00;
     font-weight: bold;
+  }
+
+  @media (max-width: 640px) {
+    body) {
+    flex-direction: row;
+    position: initial;
+    height: auto;
+    justify-content: center;
+    background: #FFFFFF;
+    font-size: auto;
   }
 `;
