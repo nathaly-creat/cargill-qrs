@@ -3,6 +3,7 @@
     width: 50vw;
     height: 60vh;
     gap: 5%;
+    font-family: 'Helvetica Neue';
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -19,14 +19,20 @@ export function Home() {
         <section className="container-home">
             <h1 className="title-home">¡Queremos escucharte!</h1>
             <h2 className="second-title-home">Portal de quejas y reclamos</h2>
+            <br />
             <div className="container-link-login">
-                <Link to="/login" className="link-login">
-                CLIENTE
+                <Link to="/login">
+                <button className='link-login'>
+                 Ingresar
+                </button>
                 </Link>
             </div>
+            <br />
             <div className="container-link-login">
-                <Link to="/login" className="link-service-area">
-                AREA DE SERVICIO
+                <Link to="/login">
+                <button className='link-service-area'>
+                 Area de servicio
+                </button>
                 </Link>
             </div>
         </section>

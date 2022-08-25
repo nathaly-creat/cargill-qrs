@@ -4,8 +4,17 @@ body {
 }
 
 .component-home{
-    display: flex;
-    flex-direction: row;
+   /*  display: flex;
+    flex-direction: row; */
+    /* display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column; */
+  display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .container-image {
@@ -14,29 +23,37 @@ body {
 }
 
 .image-login{
-    width: 100%;
+    width: 200%;
 }
 
 .container-home{
+    /* display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column; */
     display: flex;
     align-content: center;
     align-items: center;
     flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-left: 20%;
+    margin-top: 10%;
 }
 
 .title-home {
-    font-size: 45px;
+    font-size: 25px;
     font-family: "Helvetica Neue";
     margin-bottom: 5%;
     font-weight: bold;
 }
 
 .second-title-home{
-    font-size: 2rem;
+    font-size: 20px;
     font-family: "Helvetica Neue";
 }
 
-.container-link-login{
+/* .container-link-login{
     width: 45%;
     height: 40px;
     margin-top: 5%;
@@ -45,82 +62,58 @@ body {
     padding-bottom: 0px;
     background: #00833c;
     border-radius: 12px;
-}
+} */
 
 .link-login {
-    margin-top: 50px;
-    font-size: 15px;
-    padding-left: 30%;
-    color: #FFFFFF;
-    text-decoration: none;
+   /*  background-color: #00833c;
+    border-radius: 30px;
+    border-color: transparent;
+    height: 50px;
+    width: 250px;
+    color: #ffffff;
     font-family: "Helvetica Neue";
-    padding-bottom: 30%;
+    font-size: 50px; */
+
+    background-color: #00833c;
+    border-radius: 30px;
+    border-color: transparent;
+    height: 50px;
+    width: 220px;
+    color: #ffffff;
+    font-family: "Helvetica Neue";
+    font-size: 26px;
 }
 
 .link-service-area {
-    padding-left: 3%;
-    text-decoration: none;
+    /* background-color: #00833c;
+    border-radius: 30px;
+    border-color: transparent;
+    height: 50px;
+    width: 250px;
+    color: #ffffff;
     font-family: "Helvetica Neue";
-    color: #FFFFFF;
-    font-size: 19px;
-}
-/* .container-image {
-    max-width: 960px;
-}
-
-.component-home-image{
-    margin: auto;
-}
-
-.image-login{
-    height: 45%;
-}
-
-.container-home{
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 90px;
-}
-
-h1 {
-    font-size: 25px;
+    font-size: 50px; */
+    background-color: #00833c;
+    border-radius: 30px;
+    border-color: transparent;
+    height: 50px;
+    width: 220px;
+    color: #ffffff;
     font-family: "Helvetica Neue";
-    margin-top: 0;
+    font-size: 26px;
 }
-
-.container-link-login-suggestions{
-    width: 54%;
-    height: 30px;
-    margin-top: 3%;
-    padding: 2px;
-    padding-top: 8px;
-    padding-bottom: 0px;
-    background: #00833c;
-    border-radius: 12px;
-}
-.link-login {
-    margin-top: 50px;
-    font-size: 15px;
-    padding-left: 30%;
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.link-suggestions {
-    margin-top: 50px;
-    font-size: 15px;
-    padding-left: 12%;
-    color: #FFFFFF;
-    text-decoration: none;
-} */
+    
 
 @media only screen and (min-width: 1024px) {
- /* .component-home{
+ .component-home{
+  /* display: flex;
+  flex-direction: row; */
   display: flex;
-  flex-direction: row;
- } */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: flex-start
+ }
 
  .image-login {
     height: 70%;
@@ -132,27 +125,59 @@ h1 {
     margin-left: 2%;
  }
 
+ .title-home{
+    font-size: 42px;
+}
+
  .second-title-home {
-    font-size: 2rem;
+    font-size: 28px;
     margin-bottom: 6%;
     margin-top: 1%;
  }
 
  .link-service-area {
-    padding-left: 9%;
-    font-size: 17px;
+    /* font-size: 30px;
+    background-color: #00833c;
+    border-radius: 30px;
+    border-color: transparent;
+    height: 50px;
+    width: 250px;
+    color: #ffffff;
+    font-family: "Helvetica Neue";
+    font-size: 50px; */
+    background-color: #00833c;
+    border-radius: 40px;
+    border-color: transparent;
+    height: 52px;
+    width: 230px;
+    color: #ffffff;
+    font-family: "Helvetica Neue";
+    font-size: 25px;
  }
 
  .link-login{
-    font-size: 17px;
+   /* font-size: 30px;
+    background-color: #00833c;
+    border-radius: 30px;
+    border-color: transparent;
+    height: 50px;
+    width: 250px;
+    color: #ffffff;
+    font-family: "Helvetica Neue";
+    font-size: 50px; */
+    background-color: #00833c;
+    border-radius: 40px;
+    border-color: transparent;
+    height: 52px;
+    width: 230px;
+    color: #ffffff;
+    font-family: "Helvetica Neue";
+    font-size: 25px;
  }
-/* .container-link-login-suggestions {
-    width: 45%;
-    margin-bottom: 4%;
-} */
+
 
 }
 
-@media only screen and (min-width: 768px) {
-    
-}
+@media only screen and (min-width: 320px) {
+   
+} 
