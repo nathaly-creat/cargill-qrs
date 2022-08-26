@@ -23,7 +23,7 @@ export function Home() {
             <div className="container-link-login">
                 <Link to="/login">
                 <button className='link-login'>
-                 Ingresar
+                 Distribuidores
                 </button>
                 </Link>
             </div>
@@ -31,7 +31,7 @@ export function Home() {
             <div className="container-link-login">
                 <Link to="/login">
                 <button className='link-service-area'>
-                 Area de servicio
+                 Servicio al Cliente
                 </button>
                 </Link>
             </div>
