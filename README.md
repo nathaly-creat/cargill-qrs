@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Descripción del producto. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Cargill-qrs es una single page application (SPA) desarrollado usando React para la empresa Cargill. Nuestra aplicación es una interfaz con estado sincrónico para la gestión de las quejas, reclamos y seguimiento de las mismas por Servicio al Cliente, las funcionalidades a las que es posible acceder dependerán del perfil de usuario que se encuentra almacenado en Firebase. El diseño de nuestra aplicación tiene como concepto el diseño web optimizado para Móvil y Desktop.
 
-## Available Scripts
+# Tecnologías Utilizadas.
 
-In the project directory, you can run:
+<div align="center">
 
-### `npm start`
+![https://developer.mozilla.org/es/docs/Web/HTML](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1653397840/file_type_html_icon_130541_atmw6h.png)
+![https://developer.mozilla.org/es/docs/Web/CSS](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1653398039/file_type_css_icon_130661_kigv4b.png)
+![https://developer.mozilla.org/es/docs/Web/JavaScript](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1653398044/javascript_icon_130900_va5nkc.png)
+![npm](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1656693016/npm_original_wordmark_logo_icon_146402_1_n7b6ko.png)
+![https://es.reactjs.org/](https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/30px-React.svg.png)
+![https://getbootstrap.com/](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/30px-Bootstrap_logo.svg.png)
+![https://www.figma.com/](https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/20px-Figma-logo.svg.png)
+![https://git-scm.com/](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1653397045/file_type_git_icon_130581_yfdybp.png)
+![https://github.com/](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1653397485/github_logo_icon_169115_fxnzjn.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Producto Terminado.
+## *Credenciales de acceso:*
+* servicioclientes.cargill@gmail.com // Contraseña: servicioCargil
+* cargildistribuidor@gmail.com // Contraseña: Dc123456
 
-### `npm test`
+![Home](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1661473537/home_Cargil_vgpr2n.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Autores
+ Developers | Contact |
+| ------------- | ------------- |
+| <span style="color:#dbdddf;">**Nathaly Huerta**</span> | [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nathalyhuertabermúdez/) [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nathaly-creat) |
+| <span style="color:#dbdddf;">**Angie Mariscal**</span>| [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/angie-mariscal/) [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Angie-Mp) |
+| <span style="color:#dbdddf;">**Carmen Herrera**</span> | [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/carmenherreraanicama/) [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/carmen0810) |
+| <span style="color:#dbdddf;">**Elizabeth Chillcce**</span>| [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/elichillcce) [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ElizabethChillcce) |
+| <span style="color:#dbdddf;">**Zulay Mejia**</span> | [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/zulay-mejia-360234236/) [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/zulaymejia) |
+| <span style="color:#dbdddf;">**Karen Alarcon**</span>| [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/karenalarconcv) [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/KalarconYarz) |
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
