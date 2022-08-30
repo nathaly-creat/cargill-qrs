@@ -14,8 +14,8 @@ import {
 
 
 /*Importación de Vistas*/
-import {SuggestionsView} from "../views/Suggestion/SuggestionView.js"
-import {ComplainView} from "../views/Complain/ComplainView.js"
+import {SuggestionsView} from '../views/Suggestion/SuggestionView.js'
+import {ComplainView} from '../views/Complain/ComplainView.js'
 import { TracingView } from '../views/Tracing/TracingView';
 import { LoginView } from '../views/Login/LoginView.js';
 import { TracingViewSolicitud} from '../views/Tracing/TracingViewSolicitud';
@@ -52,13 +52,13 @@ export default function AppRouter() {
 
       <Route path='/login' element={<LoginView setUserData={setUserData} />} />
       <Route path='/handler' element={<ProtectedRoute userData={userData} />} />
-      <Route path="/handler/sugerencias" element={<SuggestionsView/>}/>
-      <Route path="/handler/quejas" element={<ComplainView/>}/>
-      <Route path="/handler/seguimiento" element={<TracingView/>}/>
+      <Route path='/handler/sugerencias' element={<SuggestionsView/>}/>
+      <Route path='/handler/quejas' element={<ComplainView/>}/>
+      <Route path='/handler/seguimiento' element={<TracingView/>}/>
 
-      <Route path="/handler/seguimiento/solicitud" element={<TracingViewSolicitud/>}/>
-      <Route path="/handler/seguimiento/solicitud/calificacion" element={<TracingCalificacionView/>}/>
-      {/* <Route path="/handler/delivered" element={<DeliveredView />}/> */}
+      <Route path='/handler/seguimiento/solicitud' element={<TracingViewSolicitud/>}/>
+      <Route path='/handler/seguimiento/solicitud/calificacion' element={<TracingCalificacionView/>}/>
+      {/* <Route path='/handler/delivered' element={<DeliveredView />}/> */}
 
     </Routes>
   );

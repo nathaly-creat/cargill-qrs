@@ -1,20 +1,20 @@
 
-import React from "react";
+import React from 'react';
 
-import "./TracingCalificacion.css";
+import './TracingCalificacion.css';
 import Swal from 'sweetalert2'
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export const TracingCalificacion = () => {
   
 
       return (
-       <div className="calificacion">
-        <h1 className="titulo">Seguimiento</h1>
+       <div className='calificacion'>
+        <h1 className='titulo'>Seguimiento</h1>
         <p>Califique que tal fue el servicio que le hemos brindado</p>
         <br/>
 
-        <Link to="/handler/seguimiento">
+        <Link to='/handler/seguimiento'>
         <button onClick={()=>   
         Swal.fire({
         position: 'top-center',
@@ -22,11 +22,11 @@ export const TracingCalificacion = () => {
         title: 'Gracias por calificarnos',
         showConfirmButton: false,
         timer: 1800
-       }) } className="buttonStyleCalificacionUno" >  Muy buena</button>
+       }) } className='buttonStyleCalificacionUno' >  Muy buena</button>
        </Link>
         <br/>
 
-        <Link to="/handler/seguimiento">
+        <Link to='/handler/seguimiento'>
         <button onClick={()=>   
         Swal.fire({
         position: 'top-center',
@@ -34,11 +34,11 @@ export const TracingCalificacion = () => {
         title: 'Gracias por calificarnos',
         showConfirmButton: false,
         timer: 1800
-       }) } className="buttonStyleCalificacionDos" >  Buena</button>
+       }) } className='buttonStyleCalificacionDos' >  Buena</button>
        </Link>
         <br/>
 
-        <Link to="/handler/seguimiento">
+        <Link to='/handler/seguimiento'>
         <button onClick={()=>   
         Swal.fire({
         position: 'top-center',
@@ -46,11 +46,11 @@ export const TracingCalificacion = () => {
         title: 'Gracias por calificarnos',
         showConfirmButton: false,
         timer: 1800
-       }) } className="buttonStyleCalificacionTres" >  Regular</button>
+       }) } className='buttonStyleCalificacionTres' >  Regular</button>
        </Link>
         <br/>
 
-        <Link to="/handler/seguimiento">
+        <Link to='/handler/seguimiento'>
         <button onClick={()=>   
         Swal.fire({
         position: 'top-center',
@@ -58,7 +58,7 @@ export const TracingCalificacion = () => {
         title: 'Gracias por calificarnos',
         showConfirmButton: false,
         timer: 1800
-       }) } className="buttonStyleCalificacionCuatro" >  Malo</button>
+       }) } className='buttonStyleCalificacionCuatro' >  Malo</button>
        </Link>
        </div>
       );

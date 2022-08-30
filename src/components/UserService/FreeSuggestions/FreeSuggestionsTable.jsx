@@ -1,14 +1,14 @@
-// import React from "react";
-// import { Table } from "reactstrap";
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import { SelectProceeds } from "../FreeSuggestions/SelectProceeds.jsx";
+// import React from 'react';
+// import { Table } from 'reactstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import { SelectProceeds } from '../FreeSuggestions/SelectProceeds.jsx';
 // import '../SuggestionService/SuggestionsTable.css';
 
 // export const FreeSuggestionsTable = () => {
 //   return (
-//     <div className="suggestions-service">
+//     <div className='suggestions-service'>
 //       <h2>Estatus de Quejas para Deliberar.</h2>
-//       <Table responsive className="suggestions-service-table">
+//       <Table responsive className='suggestions-service-table'>
 //         <thead>
 //           <tr>
 //             <th>Ticket</th>
@@ -22,7 +22,7 @@
 //         </thead>
 //         <tbody>
 //           <tr>
-//             <th scope="row">
+//             <th scope='row'>
 //               1
 //             </th>
             

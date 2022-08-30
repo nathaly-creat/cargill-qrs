@@ -1,15 +1,15 @@
-import { Table } from "reactstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import React, { useEffect, useState } from "react";
-import {collection, getDocs, updateDoc, doc, where, query} from "firebase/firestore";
-import { db } from "../../../firebase/firebase.js";
-import "./SuggestionsTable.css";
+import { Table } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useEffect, useState } from 'react';
+import {collection, getDocs, updateDoc, doc, where, query} from 'firebase/firestore';
+import { db } from '../../../firebase/firebase.js';
+import './SuggestionsTable.css';
 import Swal from 'sweetalert2'
 
 export const SuggestionsTable = () => {
 
   const [users, setTotal] = useState([]);
-  const usersCollectionRef = collection(db, "quejas");  
+  const usersCollectionRef = collection(db, 'quejas');  
 
   const getUsers = async () => {
    const data = await getDocs(query(usersCollectionRef));
@@ -23,13 +23,13 @@ export const SuggestionsTable = () => {
 
   return (
     <div>
-       <div className="suggestions-service">
+       <div className='suggestions-service'>
       <br/>
       <h2>Seguimiento Servicio al Cliente</h2>
       <br/>
-      <div className="containerOrders">
+      <div className='containerOrders'>
             <div>
-               <Table responsive className="suggestions-service-table">
+               <Table responsive className='suggestions-service-table'>
         <thead>
           <tr>
             <th>Ticket</th>
@@ -46,7 +46,7 @@ export const SuggestionsTable = () => {
         {users.map((user, id) => {
           return(
           <tr key={id} >
-            <th scope="row">
+            <th scope='row'>
               1
             </th>
             <td>{user.correo} </td>
@@ -64,7 +64,7 @@ export const SuggestionsTable = () => {
              {user.factura}
             </td>
             <td>
-              <button className="btn-assign" onClick={()=>   
+              <button className='btn-assign' onClick={()=>   
         Swal.fire({
         position: 'top-center',
         icon: 'success',

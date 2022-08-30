@@ -1,27 +1,27 @@
-import React from "react";
-import { FormGroup, Label, Input, Form, FormText } from "reactstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./Complain.css";
-import { db } from "../../firebase/firebase.js";
-import { useState } from "react";
-import { collection, addDoc,serverTimestamp } from "firebase/firestore";
+import React from 'react';
+import { FormGroup, Label, Input, Form, FormText } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Complain.css';
+import { db } from '../../firebase/firebase.js';
+import { useState } from 'react';
+import { collection, addDoc,serverTimestamp } from 'firebase/firestore';
 import Swal from 'sweetalert2'
 
 //Componente con el formulario de quejas
 //PARA PROBARLO
 export const Complain = () => {
 
-  const usersCollectionRef = collection(db, "quejas");
-  const [correo, setCorreo] = useState([""]);
-  const [opcionesQueja, setOpcionesQueja] = useState([""]);
-  const [plantaProducto, setPlantaProducto] = useState([""]);
-  const [factura, setFactura] = useState([""]);
-  const [fechaEmbarque, setFechaEmbarque ] = useState([""]);
-  const [fechaCaducacion, setFechaCaducacion ] = useState([""]);
-  const [lote, setLote ] = useState([""]);
-  const [cantidad, setCantidad ] = useState([""]);
-  const [unidad, setUnidad ] = useState([""]);
-  const [comentario, setComentario ] = useState([""]);
+  const usersCollectionRef = collection(db, 'quejas');
+  const [correo, setCorreo] = useState(['']);
+  const [opcionesQueja, setOpcionesQueja] = useState(['']);
+  const [plantaProducto, setPlantaProducto] = useState(['']);
+  const [factura, setFactura] = useState(['']);
+  const [fechaEmbarque, setFechaEmbarque ] = useState(['']);
+  const [fechaCaducacion, setFechaCaducacion ] = useState(['']);
+  const [lote, setLote ] = useState(['']);
+  const [cantidad, setCantidad ] = useState(['']);
+  const [unidad, setUnidad ] = useState(['']);
+  const [comentario, setComentario ] = useState(['']);
 
   const insertFormQueja = () => {
     addDoc(usersCollectionRef,{
@@ -38,16 +38,16 @@ export const Complain = () => {
       unidad:unidad,
       comentario:comentario,
      })
-     setCorreo("");
-      setOpcionesQueja("");
-      setPlantaProducto("");
-      setFactura("");
-      setFechaEmbarque("");
-      setFechaCaducacion("");
-      setLote("");
-      setCantidad("");
-      setUnidad("");
-      setComentario("");
+     setCorreo('');
+      setOpcionesQueja('');
+      setPlantaProducto('');
+      setFactura('');
+      setFechaEmbarque('');
+      setFechaCaducacion('');
+      setLote('');
+      setCantidad('');
+      setUnidad('');
+      setComentario('');
 
       Swal.fire({
         position: 'top-center',
@@ -61,15 +61,15 @@ export const Complain = () => {
 
 
   return (
-    <div className="form-quejas">
-      <h2 className="title-quejas">Quejas y reclamos</h2>
+    <div className='form-quejas'>
+      <h2 className='title-quejas'>Quejas y reclamos</h2>
       <Form>
       <FormGroup>
-          <Label for="exampleDatetime">Correo</Label>
+          <Label for='exampleDatetime'>Correo</Label>
           <Input
-            id="exampleDatetime"
-            name="datetime"
-            placeholder="Correo"
+            id='exampleDatetime'
+            name='datetime'
+            placeholder='Correo'
             value={correo}
             onChange={(event) => {
               setCorreo(event.target.value);
@@ -77,17 +77,17 @@ export const Complain = () => {
           />
         </FormGroup>
 
-        <Label for="exampleSelect" sm={6}>
+        <Label for='exampleSelect' sm={6}>
           Opciones de quejas
         </Label>
 
         <FormGroup row>
-          <Input id="exampleSelect" name="select" type="select"
+          <Input id='exampleSelect' name='select' type='select'
            value={opcionesQueja}
            onChange={(event) => {
              setOpcionesQueja(event.target.value);
            }}>
-            <option placeholder="Seleccione su queja">
+            <option placeholder='Seleccione su queja'>
               Seleccione su tipo de queja
             </option>
             <option>AC- Alimento caliente</option>
@@ -102,11 +102,11 @@ export const Complain = () => {
             <option>PH - Producto enmohecido</option>
           </Input>
         </FormGroup>
-        <Label for="exampleSelect" sm={4}>
+        <Label for='exampleSelect' sm={4}>
           Planta productora
         </Label>
         <FormGroup row>
-          <Input id="exampleSelect" name="select" type="select"
+          <Input id='exampleSelect' name='select' type='select'
            value={plantaProducto}
            onChange={(event) => {
              setPlantaProducto(event.target.value);
@@ -128,12 +128,12 @@ export const Complain = () => {
         </FormGroup>
 
         <FormGroup>
-          <Label for="exampleDatetime">Factura</Label>
+          <Label for='exampleDatetime'>Factura</Label>
           <Input
-            id="exampleDatetime"
-            name="datetime"
-            placeholder="Número de factura"
-            type="datetime"
+            id='exampleDatetime'
+            name='datetime'
+            placeholder='Número de factura'
+            type='datetime'
             value={factura}
             onChange={(event) => {
               setFactura(event.target.value);
@@ -142,16 +142,16 @@ export const Complain = () => {
         </FormGroup>
 
         <FormGroup>
-          <Label for="exampleEmail">Detalle del producto y/o factura</Label>
+          <Label for='exampleEmail'>Detalle del producto y/o factura</Label>
         </FormGroup>
 
         <FormGroup>
-          <Label for="exampleDate">Fecha de embarque</Label>
+          <Label for='exampleDate'>Fecha de embarque</Label>
           <Input
-            id="exampleDate"
-            name="date"
-            placeholder="date placeholder"
-            type="date"
+            id='exampleDate'
+            name='date'
+            placeholder='date placeholder'
+            type='date'
             value={fechaEmbarque}
             onChange={(event) => {
               setFechaEmbarque(event.target.value);
@@ -160,12 +160,12 @@ export const Complain = () => {
         </FormGroup>
 
         <FormGroup>
-          <Label for="exampleDate">Fecha de caducación</Label>
+          <Label for='exampleDate'>Fecha de caducación</Label>
           <Input
-            id="exampleDate"
-            name="date"
-            placeholder="date placeholder"
-            type="date"
+            id='exampleDate'
+            name='date'
+            placeholder='date placeholder'
+            type='date'
             value={fechaCaducacion}
             onChange={(event) => {
               setFechaCaducacion(event.target.value);
@@ -174,12 +174,12 @@ export const Complain = () => {
         </FormGroup>
 
         <FormGroup>
-          <Label for="exampleNumber">Lote</Label>
+          <Label for='exampleNumber'>Lote</Label>
           <Input
-            id="exampleNumber"
-            name="number"
-            placeholder="Ej: HJFHKGD12563-1546"
-            type="number"
+            id='exampleNumber'
+            name='number'
+            placeholder='Ej: HJFHKGD12563-1546'
+            type='number'
             value={lote}
             onChange={(event) => {
               setLote(event.target.value);
@@ -188,12 +188,12 @@ export const Complain = () => {
         </FormGroup>
 
         <FormGroup>
-          <Label for="exampleNumber">Cantidad</Label>
+          <Label for='exampleNumber'>Cantidad</Label>
           <Input
-            id="exampleNumber"
-            name="number"
-            placeholder="Ej: 2"
-            type="number"
+            id='exampleNumber'
+            name='number'
+            placeholder='Ej: 2'
+            type='number'
             value={cantidad}
             onChange={(event) => {
               setCantidad(event.target.value);
@@ -202,12 +202,12 @@ export const Complain = () => {
         </FormGroup>
 
         <FormGroup>
-          <Label for="exampleNumber">Unidad</Label>
+          <Label for='exampleNumber'>Unidad</Label>
           <Input
-            id="exampleNumber"
-            name="number"
-            placeholder="Ej: Saco"
-            type="text"
+            id='exampleNumber'
+            name='number'
+            placeholder='Ej: Saco'
+            type='text'
             value={unidad}
             onChange={(event) => {
               setUnidad(event.target.value);
@@ -216,22 +216,22 @@ export const Complain = () => {
         </FormGroup>
 
         <FormGroup>
-          <Label for="exampleText">Comentario</Label>
-          <Input id="exampleText" name="text" type="textarea"
+          <Label for='exampleText'>Comentario</Label>
+          <Input id='exampleText' name='text' type='textarea'
            value={comentario}
            onChange={(event) => {
              setComentario(event.target.value);
            }} />
         </FormGroup>
         <FormGroup>
-          <Label for="exampleFile">File</Label>
-          <Input id="exampleFile" name="file" type="file" />
+          <Label for='exampleFile'>File</Label>
+          <Input id='exampleFile' name='file' type='file' />
           <FormText>
            Capacidad Archivos hasta 300Mb. Formato pdf, jpg, png. 
           </FormText>
         </FormGroup>
       </Form>
-      <button className="button-quejas"
+      <button className='button-quejas'
         onClick={() => insertFormQueja(
           correo,
           opcionesQueja,

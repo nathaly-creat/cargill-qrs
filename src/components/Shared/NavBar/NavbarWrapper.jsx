@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const NavbarWrapper = styled.nav`
   display: flex;
@@ -8,7 +8,7 @@ export const NavbarWrapper = styled.nav`
   background: #333333;
   position: fixed;
   top: 10vh;
-  right: ${props => (props.open ? "0" : "100%")};
+  right: ${props => (props.open ? '0' : '100%')};
   gap:8px;
   width: 100%;
   height: 30vh;
